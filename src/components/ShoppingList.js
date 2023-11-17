@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Item from "./Item";
-import Filter from "./Filter"; // Insert this line
+import Filter from "./Filter"; 
 
 function ShoppingList({ items }) {
   const [selectedCategory, setSelectedCategory] = useState("All");
@@ -17,7 +17,7 @@ function ShoppingList({ items }) {
 
   return (
     <div className="ShoppingList">
-      <Filter onCategoryChange={handleCategoryChange} /> {/* Insert this line */}
+      <Filter onCategoryChange={handleCategoryChange} />
       <ul className="Items">
         {itemsToDisplay.map((item) => (
           <Item key={item.id} name={item.name} category={item.category} />
